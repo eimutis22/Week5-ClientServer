@@ -1,0 +1,15 @@
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\ClientConsole.exe.config
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\ClientConsole.exe
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\ClientConsole.pdb
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\CommonObjects.dll
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\ProductClient.dll
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\CommonObjects.pdb
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\ProductClient.pdb
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\ProductClient.dll.config
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\obj\Debug\ClientConsole.csprojResolveAssemblyReference.cache
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\obj\Debug\ClientConsole.csproj.CoreCompileInputs.cache
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\obj\Debug\ClientConsole.exe
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ClientConsole\obj\Debug\ClientConsole.pdb

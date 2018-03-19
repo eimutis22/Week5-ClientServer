@@ -1,6 +1,7 @@
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\bin\Debug\CommonObjects.dll
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\bin\Debug\CommonObjects.pdb
-C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\obj\Debug\CommonObjects.csprojResolveAssemblyReference.cache
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\obj\Debug\CommonObjects.csproj.CoreCompileInputs.cache
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\obj\Debug\CommonObjects.dll
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\obj\Debug\CommonObjects.pdb
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\CommonObjects\bin\Debug\Newtonsoft.Json.xml

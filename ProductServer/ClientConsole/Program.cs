@@ -14,7 +14,8 @@ namespace ClientConsole
         {
 
             // Login and set Token for a valid user account
-            ClientApiLib.baseWebAddress = "http://localhost:49614/";
+            ClientApiLib.baseWebAddress = "http://localhost:64749/";
+            //ClientApiLib.baseWebAddress = "http://localhost:49614/";
 
             if (ClientApiLib.login("fflynstone", "Flint$12345"))
             {
