@@ -81,3 +81,4 @@ C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\Prod
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ProductServer\obj\Debug\ProductServer.pdb
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ProductServer\obj\Debug\ProductServer.Migrations.ApplicationMigrations.Initial.resources
 C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ProductServer\obj\Debug\ProductServer.csproj.GenerateResource.Cache
+C:\Users\Eimutis\Documents\Github\RAD_Week5_ClientServer\Week5-ClientServer\ProductServer\ProductServer\obj\Debug\ProductServer.Migrations.ProductMigrations.Initial.resources

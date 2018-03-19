@@ -1,4 +1,4 @@
-namespace ProductServer
+namespace ProductServer.Models.Products
 {
     using System;
     using System.Data.Entity;
@@ -8,14 +8,10 @@ namespace ProductServer
     {
         public ProductDbContext(): base("name=ProductDbContext")
         {
+            Configuration.LazyLoadingEnabled = false;
         }
 
-        // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }
