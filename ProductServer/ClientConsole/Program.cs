@@ -18,6 +18,7 @@ namespace ClientConsole
 
             if (ClientApiLib.login("fflynstone", "Flint$12345"))
             {
+                // List all the Products that need re-ordering.
                 List<ProductDTO> reorderList = ClientApiLib.getOrorderList();
                 foreach (var item in reorderList)
                     Console.WriteLine("{0} {1} {2}", item.Description, item.ReorderLevel, item.Quantity);
