@@ -234,9 +234,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ApplicationMigrations\201803191153064_Initial.cs" />
-    <Compile Include="Migrations\ApplicationMigrations\201803191153064_Initial.Designer.cs">
-      <DependentUpon>201803191153064_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationMigrations\201803191208421_Initial.cs" />
+    <Compile Include="Migrations\ApplicationMigrations\201803191208421_Initial.Designer.cs">
+      <DependentUpon>201803191208421_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationMigrations\Configuration.cs" />
     <Compile Include="Migrations\ProductMigrations\201803191157338_Initial.cs" />
@@ -335,8 +335,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\ApplicationMigrations\201803191153064_Initial.resx">
-      <DependentUpon>201803191153064_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationMigrations\201803191208421_Initial.resx">
+      <DependentUpon>201803191208421_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ProductMigrations\201803191157338_Initial.resx">
       <DependentUpon>201803191157338_Initial.cs</DependentUpon>
