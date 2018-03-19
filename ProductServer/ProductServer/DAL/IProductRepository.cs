@@ -10,8 +10,9 @@ namespace ProductServer.DAL
     public interface IProductRepository : IRepository<Product>
     {
         Task<IList<Product>> GetReorderListAsync();
+        Task<Product> OrderItemAsync(Product p, int Quantity);
+
         float GetStockCost(int ProductID);
         bool CheckStock(int productID, int quantityPurchased);
-        Task<Product> OrderItemAsync(Product p, int Quantity);
     }
 }
