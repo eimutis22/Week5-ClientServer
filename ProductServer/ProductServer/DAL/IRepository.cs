@@ -8,10 +8,10 @@ namespace ProductServer.DAL
 {
     public interface IRepository<T>
     {
-        Task<IList<T>> getEntities();
-        Task<T> GetEntity(int id);
-        Task<T> PutEntity(T Entity);
-        Task<T> PostEntity(T Entity);
-        Task<T> delete(int id);
+        Task<IList<T>> getEntitiesAsync();
+        Task<T> GetEntityAsync(int id);
+        Task<T> PutEntityAsync(T Entity);
+        Task<T> PostEntityAsync(T Entity);
+        Task<T> deleteAsync(int id);
     }
 }

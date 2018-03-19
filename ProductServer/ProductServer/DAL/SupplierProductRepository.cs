@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using ProductServer.Models.Products;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 
 namespace ProductServer.DAL
 {
@@ -19,82 +21,188 @@ namespace ProductServer.DAL
 
         public bool CheckStock(int productID, int quantityPurchased)
         {
-            throw new NotImplementedException();
+            var found = ctx.Products.Find(productID);
+            if (found != null)
+            {
+                if (found.Quantity - quantityPurchased < 0) return false;
+                else return true;
+            }
+            return false;
         }
 
-        public Task<Product> delete(int id)
+        public async Task<Product> deleteAsync(int id)
         {
-            throw new NotImplementedException();
+            Product product = await ctx.Products.FindAsync(id);
+            if (product == null)
+            {
+                return null;
+            }
+            ctx.Products.Remove(product);
+            await ctx.SaveChangesAsync();
+            return product; ;
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            this.Dispose();
         }
 
-        public Task<IList<Product>> getEntities()
+        public async Task<IList<Product>> getEntitiesAsync()
         {
-            throw new NotImplementedException();
+            return await ctx.Products.ToListAsync();
         }
 
-        public Task<Product> GetEntity(int id)
+        public async Task<Product> GetEntityAsync(int id)
         {
-            throw new NotImplementedException();
+            Product product = await ctx.Products.FindAsync(id);
+            if (product == null)
+            {
+                return null;
+            }
+
+            return product;
         }
 
-        public Task<IList<Product>> GetReorderList()
+        public async Task<IList<Product>> GetReorderListAsync()
         {
-            throw new NotImplementedException();
+            return await ctx.Products.Where(p => p.Quantity <= p.ReOrderLevel).ToListAsync();
         }
 
         public float GetStockCost(int ProductID)
         {
-            throw new NotImplementedException();
+            Product p = ctx.Products.Find(ProductID);
+            if (p != null)
+            {
+                return (p.Price * p.Quantity);
+            }
+            return -999f;
         }
 
-        public Task<Product> OrderItem(Product p, int Quantity)
+        public async Task<Product> OrderItemAsync(Product p, int Quantity)
         {
-            throw new NotImplementedException();
+            if (p.Quantity - Quantity > 0)
+            {
+                p.Quantity -= Quantity;
+                ctx.Entry(p).State = EntityState.Modified;
+                try
+                {
+                    await ctx.SaveChangesAsync();
+                    return p; // Return changed product accepted
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ProductExists(p.ProductID))
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
+            return p; // return unchanged product
         }
 
-        public Task<Product> PostEntity(Product Entity)
+        public async Task<Product> PostEntityAsync(Product Entity)
         {
-            throw new NotImplementedException();
+            ctx.Products.Add(Entity);
+            await ctx.SaveChangesAsync();
+            return Entity;
         }
 
-        public Task<Supplier> PostEntity(Supplier Entity)
+        public async Task<Supplier> PostEntityAsync(Supplier Entity)
         {
-            throw new NotImplementedException();
+            ctx.Suppliers.Add(Entity);
+            await ctx.SaveChangesAsync();
+            return Entity;
         }
 
-        public Task<Product> PutEntity(Product Entity)
+        public async Task<Product> PutEntityAsync(Product Entity)
         {
-            throw new NotImplementedException();
+            ctx.Entry(Entity).State = EntityState.Modified;
+
+            try
+            {
+                await ctx.SaveChangesAsync();
+                return Entity;
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductExists(Entity.ProductID))
+                {
+                    return null;
+                }
+                else
+                {
+                    throw;
+                }
+            }
         }
 
-        public Task<Supplier> PutEntity(Supplier Entity)
+        private bool SupplierExists(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Suppliers.Count(e => e.SupplierID == id) > 0;
+        }
+        private bool ProductExists(int id)
+        {
+            return ctx.Products.Count(e => e.ProductID == id) > 0;
         }
 
-        public Task<IList<Product>> SupplierProducts()
+        public async Task<Supplier> PutEntityAsync(Supplier Entity)
         {
-            throw new NotImplementedException();
+            ctx.Entry(Entity).State = EntityState.Modified;
+
+            try
+            {
+                await ctx.SaveChangesAsync();
+                return Entity;
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!SupplierExists(Entity.SupplierID))
+                {
+                    return null;
+                }
+                else
+                {
+                    throw;
+                }
+            }
         }
 
-        Task<Supplier> IRepository<Supplier>.delete(int id)
+        public async Task<IList<Product>> SupplierProductsAsync()
         {
-            throw new NotImplementedException();
+            return await ctx.Products.Include("associatedSupplier").ToListAsync();
         }
 
-        Task<IList<Supplier>> IRepository<Supplier>.getEntities()
+        async Task<Supplier> IRepository<Supplier>.deleteAsync(int id)
         {
-            throw new NotImplementedException();
+            Supplier supplier = await ctx.Suppliers.FindAsync(id);
+            if (supplier == null)
+            {
+                return null;
+            }
+            ctx.Suppliers.Remove(supplier);
+            await ctx.SaveChangesAsync();
+
+            return supplier;
         }
 
-        Task<Supplier> IRepository<Supplier>.GetEntity(int id)
+        async Task<IList<Supplier>> IRepository<Supplier>.getEntitiesAsync()
+        {   
+            return await ctx.Suppliers.ToListAsync();
+        }
+
+        async Task<Supplier> IRepository<Supplier>.GetEntityAsync(int id)
         {
-            throw new NotImplementedException();
+            Supplier supplier = await ctx.Suppliers.FindAsync(id);
+            if (supplier == null)
+            {
+                return null;
+            }
+
+            return supplier;
         }
     }
 }

@@ -9,6 +9,6 @@ namespace ProductServer.DAL
 {
     public interface ISupplierRepository : IRepository<Supplier>
     {
-        Task<IList<Product>> SupplierProducts();
+        Task<IList<Product>> SupplierProductsAsync();
     }
 }
